@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MindCare - Workplace Mental Health Test</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+  <!-- Your script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="images/Logo.png" alt="MindCare Logo" class="logo" />
+      </a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="test.html">Test</a>
+      <a href="signin.html">Sign In</a>
+      <a href="signup.html">Sign Up</a>
+      <button onclick="logout()" class="logout-link">Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="test-content">
+      <h1>Workplace Mental Health Test</h1>
+      <p>Please answer the following questions based on your recent work experiences.</p>
+
+      <form id="mentalHealthForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter your full name" required />
+
+        <label for="Age">Your Age:</label>
+        <input type="number" id="Age" required />
+
+        <label for="Gender">Gender:</label>
+        <select id="Gender" required>
+          <option value="">Select</option>
+          <option value="0">Female</option>
+          <option value="1">Male</option>
+        </select>
+
+        <label for="stressAtWork">How often do you feel stressed at work?</label>
+        <select id="stressAtWork" required>
+          <option value="">Select</option>
+          <option value="Never">Never</option>
+          <option value="Rarely">Rarely</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="Often">Often</option>
+          <option value="Always">Always</option>
+        </select>
+
+        <label for="supportAtWork">Do you feel supported at work?</label>
+        <select id="supportAtWork" required>
+          <option value="">Select</option>
+          <option value="Never">Never</option>
+          <option value="Rarely">Rarely</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="Often">Often</option>
+          <option value="Always">Always</option>
+        </select>
+
+        <label for="workLifeInterference">How often does work interfere with life?</label>
+        <select id="workLifeInterference" required>
+          <option value="">Select</option>
+          <option value="Never">Never</option>
+          <option value="Rarely">Rarely</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="Often">Often</option>
+          <option value="Always">Always</option>
+        </select>
+
+        <label for="emotionalDrain">Do you feel emotionally drained?</label>
+        <select id="emotionalDrain" required>
+          <option value="">Select</option>
+          <option value="Never">Never</option>
+          <option value="Rarely">Rarely</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="Often">Often</option>
+          <option value="Always">Always</option>
+        </select>
+
+        <label for="feelingValued">Do you feel valued at work?</label>
+        <select id="feelingValued" required>
+          <option value="">Select</option>
+          <option value="Never">Never</option>
+          <option value="Rarely">Rarely</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="Often">Often</option>
+          <option value="Always">Always</option>
+        </select>
+
+        <label for="concentration">Do you struggle with concentration?</label>
+        <select id="concentration" required>
+          <option value="">Select</option>
+          <option value="Never">Never</option>
+          <option value="Rarely">Rarely</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="Often">Often</option>
+          <option value="Always">Always</option>
+        </select>
+
+        <label for="socialIsolation">Do you feel isolated at work?</label>
+        <select id="socialIsolation" required>
+          <option value="">Select</option>
+          <option value="Never">Never</option>
+          <option value="Rarely">Rarely</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="Often">Often</option>
+          <option value="Always">Always</option>
+        </select>
+
+        <label for="burnout">How often do you feel burned out?</label>
+        <select id="burnout" required>
+          <option value="">Select</option>
+          <option value="Never">Never</option>
+          <option value="Rarely">Rarely</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="Often">Often</option>
+          <option value="Always">Always</option>
+        </select>
+
+        <br><br>
+        <button type="submit">Submit Test</button>
+      </form>
+
+      <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+      <button onclick="fetchPredictionHistory()">View My Prediction History</button>
+      <div id="history" style="margin-top: 20px;"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>MindCare © 2025</p>
+  </footer>
+
+  <script>
+    // Redirect to sign in if the user is not logged in
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!localStorage.getItem("loggedInUser")) {
+        alert("Please sign in to access the test.");
+        window.location.href = "signin.html";
+      }
+    });
+  </script>
+</body>
+</html>

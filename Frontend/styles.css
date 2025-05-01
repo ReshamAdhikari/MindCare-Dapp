@@ -1,0 +1,256 @@
+/* General Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #e8f5e9);
+  color: #333;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #46a8c9;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;           
+  justify-content: center;       
+  gap: 20px;                     
+  padding: 10px 20px;
+}
+
+.navbar a {
+  color: rgb(245, 240, 240);
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 30px;
+}
+
+.navbar a.active {
+  color: red;
+  font-weight: bold;
+}
+
+
+/* Main content area */
+main {
+  flex: 1;
+}
+
+/* Home page content */
+.home-content {
+  text-align: center;
+  padding: 50px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  margin: 50px auto;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.home-content button {
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-content button:hover {
+  background-color: #45a049;
+}
+
+.home-image {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Test Page - Form Styling */
+.test-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 60%;
+  margin: 50px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.test-content label {
+  font-weight: bold;
+}
+
+.test-content select,
+.test-content input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.test-content button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.test-content button:hover {
+  background-color: #45a049;
+}
+
+/* Signup & Signin Forms */
+.auth-content {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.auth-content h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-content input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.auth-content button {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-content button:hover {
+  background-color: #45a049;
+}
+
+.auth-content p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* About Page Styling */
+.about-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.about-container {
+  max-width: 800px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.about-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about-images img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.logo-link {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;       
+  width: auto;
+  margin-right: 10px; 
+}
+.logout-link {
+  background: none;
+  border: none;
+  color: rgb(245, 240, 240);
+  font-size: 18px;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.logout-link:hover {
+  text-decoration: underline;
+}
+
